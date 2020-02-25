@@ -43,3 +43,14 @@ Recalculate each cluster center from points that belong to it. </i> <br>
 
 ![fail3](https://user-images.githubusercontent.com/16246821/75246832-987b2500-57f6-11ea-9df1-4de0241f6653.png)
 
+
+## Disadvantages of K Means
+
+<ol>
+<li> You have to choose K 
+<li> Stuck in Local Minima 
+<li> Sensitive to Initial Configuration
+<li> Can't Solve the Donut Problem
+<li> Doesn't Take into account Density of the cluster
+
+</ol>
