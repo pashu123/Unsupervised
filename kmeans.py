@@ -45,6 +45,8 @@ def plot_k_means(X,K,max_iter = 20,beta = 1.0):
         
     plt.plot(costs)
     plt.title("costs")
+    plt.xlabel('No. of iterations')
+    plt.ylabel('Average Mean Distance')
     plt.show()
 
     random_colors = np.random.random((K,3))
@@ -63,7 +65,7 @@ def main():
     ## s is distance by which various gaussian clouds are separated
     s = 4
 
-    ### There are 3 differnet daussian clouds with different means as given
+    ### There are 3 differnet gaussian clouds with different means as given
     mu1 = np.array([0,0])
     mu2 = np.array([s,s])
     mu3 = np.array([0,s])
