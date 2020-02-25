@@ -25,9 +25,19 @@ def plot_k_means(X,K,max_iter = 20,beta = 1.0):
     for k in range(K):
         M[k] = X[np.random.choice(N)]
 
+    
+    grid_width = 5
+    grid_height = (max_iter / grid_width) * 1.2
+    random_colors = np.random.random((K,3))
+    plt.figure()
+
     costs = np.zeros(max_iter)
 
     for i in range(max_iter):
+        colors = R.dot(random_colors)
+        plt.subplot(grid_width,grid_height,i+1)
+        plt.scatter(X[:,0],X[:,1],c = colors)
+
         for k in range(K):
             for n in range(N):
                 R[n,k] = np.exp(-beta * d(M[k],X[n]))/ np.sum(np.exp(-beta * d(M[j],X[n])) for j in range(K))
@@ -42,18 +52,19 @@ def plot_k_means(X,K,max_iter = 20,beta = 1.0):
             if np.abs(costs[i] - costs[i-1]) < 0.1:
                 break
 
-        
-    plt.plot(costs)
-    plt.title("costs")
-    plt.xlabel('No. of iterations')
-    plt.ylabel('Average Mean Distance')
+    
     plt.show()
+    # plt.plot(costs)
+    # plt.title("costs")
+    # plt.xlabel('No. of iterations')
+    # plt.ylabel('Average Mean Distance')
+    # plt.show()
 
-    random_colors = np.random.random((K,3))
-    colors = R.dot(random_colors)
+    # random_colors = np.random.random((K,3))
+    # colors = R.dot(random_colors)
 
-    plt.scatter(X[:,0],X[:,1],c = colors)
-    plt.show() 
+    # plt.scatter(X[:,0],X[:,1],c = colors)
+    # plt.show() 
 
 
 
