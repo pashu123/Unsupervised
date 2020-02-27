@@ -54,3 +54,15 @@ Recalculate each cluster center from points that belong to it. </i> <br>
 <li> Doesn't Take into account Density of the cluster
 
 </ol>
+
+
+# Hierarchial Clustering
+
+### Ward Linkage
+![wardlinkage](https://user-images.githubusercontent.com/16246821/75453778-6c000e00-599a-11ea-87d7-9f2b0e1004db.png)
+
+### Complete Linkage
+![completelink](https://user-images.githubusercontent.com/16246821/75453754-63a7d300-599a-11ea-8df8-b18a92c57792.png)
+
+### Single Linkage
+![singlelinkage](https://user-images.githubusercontent.com/16246821/75453757-64d90000-599a-11ea-8342-fdf0977908bb.png)
