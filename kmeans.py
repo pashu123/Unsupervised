@@ -66,11 +66,7 @@ def plot_k_means(X,K,max_iter = 20,beta = 1.0):
     # plt.scatter(X[:,0],X[:,1],c = colors)
     # plt.show() 
 
-
-
-
-
-def main():
+def get_simple_data():
     ## D is the no. of dimensions
     D = 2
     ## s is distance by which various gaussian clouds are separated
@@ -88,6 +84,18 @@ def main():
     X[:300,:] = np.random.randn(300,D) + mu1
     X[300:600,:] = np.random.randn(300,D) + mu2
     X[600:,:] = np.random.randn(300,D) + mu3
+
+    return X
+
+
+
+
+
+
+def main():
+
+
+    X = get_simple_data()
 
     ## Sanity check
     plt.scatter(X[:,0],X[:,1])
