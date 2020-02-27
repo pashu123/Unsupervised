@@ -12,7 +12,7 @@
 
 ### Algorithm:
 
-Initialize: <i> Pick K Random Points to be the Cluster Centers. </i> <br>
+Initialize: <i> Pick K Random Points to be the Cluster Centers. </i><br> <br>
 <i> While not converged: <br>
 Assign each points to the nearest cluster center. <br>
 Recalculate each cluster center from points that belong to it. </i> <br>
