@@ -72,10 +72,15 @@ Recalculate each cluster center from points that belong to it. </i> <br>
 
 ## Algorithm
 
-### Calculate Responsibilities
+### 1. Calculate Responsibilities
 
 <img src="https://latex.codecogs.com/gif.latex?\gamma_k^n&space;=&space;p(z^n&space;|&space;x)&space;=&space;\frac{\pi_k\mathcal{N}(x^n|\mu_k,&space;\lambda_k)}{\sum\limits_{j=1}^k\pi_j\mathcal{N}(x^n|\mu_j,\lambda_j)}" title="\gamma_k^n = p(z^n | x) = \frac{\pi_k\mathcal{N}(x^n|\mu_k, \lambda_k)}{\sum\limits_{j=1}^k\pi_j\mathcal{N}(x^n|\mu_j,\lambda_j)}" />
 
-### Calculate Model Parameters
+### 2. Calculate Model Parameters
 
 <img src="https://latex.codecogs.com/gif.latex?\\&space;\mu_k&space;=&space;\frac{1}{N_k}\sum\limits_{n=1}^N\gamma_k^nx^n&space;\\&space;\lambda_k&space;=&space;\frac{1}{N_k}\sum\limits_{n=1}^N\gamma_k^n(x^n&space;-&space;\mu_k)(x^n-\mu_k)^T&space;\\&space;\pi_k&space;=&space;\frac{N_k}{N}&space;\\&space;N_k&space;=&space;\sum\limits_{n=1}^N\gamma_k^n" title="\\ \mu_k = \frac{1}{N_k}\sum\limits_{n=1}^N\gamma_k^nx^n \\ \lambda_k = \frac{1}{N_k}\sum\limits_{n=1}^N\gamma_k^n(x^n - \mu_k)(x^n-\mu_k)^T \\ \pi_k = \frac{N_k}{N} \\ N_k = \sum\limits_{n=1}^N\gamma_k^n" />
+
+
+## Convergence in Gaussian Mixture Model
+
+![gmm](https://user-images.githubusercontent.com/16246821/75545470-6105b600-5a4c-11ea-9db6-a20dbfbeb8f9.png)
