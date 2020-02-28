@@ -66,3 +66,12 @@ Recalculate each cluster center from points that belong to it. </i> <br>
 
 ### Single Linkage
 ![singlelinkage](https://user-images.githubusercontent.com/16246821/75453757-64d90000-599a-11ea-8342-fdf0977908bb.png)
+
+
+# Gaussian Mixture Model
+
+## Algorithm
+
+### Calculate Responsibilities
+
+<img src="https://latex.codecogs.com/gif.latex?\gamma_k^n&space;=&space;p(z^n&space;|&space;x)&space;=&space;\frac{\pi_k\mathcal{N}(x^n|\mu_k,&space;\lambda_k)}{\sum\limits_{j=1}^k\pi_j\mathcal{N}(x^n|\mu_j,\lambda_j)}" title="\gamma_k^n = p(z^n | x) = \frac{\pi_k\mathcal{N}(x^n|\mu_k, \lambda_k)}{\sum\limits_{j=1}^k\pi_j\mathcal{N}(x^n|\mu_j,\lambda_j)}" />
